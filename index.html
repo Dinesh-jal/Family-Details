@@ -289,15 +289,40 @@ html {
 <!-- } -->
 
 
-		
-		
+
+/* =========================================================		
 /* टेक्स्ट सेलेक्ट और कॉपी करने से रोकने के लिए */
+   ========================================================= */
+
 body {
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none;     /* Edge/IE */
     user-select: none;         /* Standard */
 }
 
+/* =========================================================
+   Child table ka layout update karne ke liye
+   ========================================================= */
+
+
+    /* यह स्टाइल केवल उन्हीं टेबल पर लागू होगा जिन पर .update-table क्लास होगी */
+    .update-table td {
+        border: 1px solid #e0b0b9 !important;
+        padding: 3.5px 3px !important;
+        text-align: center !important;
+    }
+    .update-table td:nth-child(2) {
+        text-align: left !important;
+        padding-left: 5px !important;
+        font-weight: bold !important;
+        color: #b32d56 !important;
+    }
+    .update-table tr:nth-child(even) td {
+        background-color: #fff2f4 !important;
+    }
+    .update-table tr:nth-child(odd) td {
+        background-color: #ffffff !important;
+    }
 		
 
     </style> 
@@ -829,8 +854,7 @@ body {
                             <tr><td class="col-sn">28</td><td class="col-name"><a href="#member-27" class="member-link">श्री जोगेंद्र कुमार (पुत्र राजेंद्र)</a></td><td class="col-level"><span class="badge-l5">L-5</span></td><td class="col-page"></td></tr>                        
                             <tr><td class="col-sn">29</td><td class="col-name"><a href="#member-28" class="member-link">श्री रिद्धकरण (पुत्र मूलचंद)</a></td><td class="col-level"><span class="badge-l4">L-4</span></td><td class="col-page"></td></tr>
 							<tr><td class="col-sn">30</td><td class="col-name"><a href="#member-29" class="member-link">श्री अर्जुन (पुत्र रिद्धकरण)</a></td><td class="col-level"><span class="badge-l5">L-5</span></td><td class="col-page"></td></tr>
-                            <tr><td class="col-sn">31</td><td class="col-name"><a href="#member-30" class="member-link">श्री मुकेश (पुत्र रिद्धकरण)</a></td><td class="col-level"><span class="badge-l5">L-5</span></td><td class="col-page"></td></tr>
-							<tr><td class="col-sn">32</td><td class="col-name"><a href="#member-31" class="member-link">श्री जयकिशन (पुत्र रिद्धकरण)</a></td><td class="col-level"><span class="badge-l5">L-5</span></td><td class="col-page"></td></tr>                            							
+                            
                         </tbody>
                     </table>
                 </div>
@@ -846,7 +870,9 @@ body {
                                 <th class="col-page">पेज नं.</th>
                             </tr>
                         </thead>
-                        <tbody>				
+                        <tbody>
+							<tr><td class="col-sn">31</td><td class="col-name"><a href="#member-30" class="member-link">श्री मुकेश (पुत्र रिद्धकरण)</a></td><td class="col-level"><span class="badge-l5">L-5</span></td><td class="col-page"></td></tr>
+							<tr><td class="col-sn">32</td><td class="col-name"><a href="#member-31" class="member-link">श्री जयकिशन (पुत्र रिद्धकरण)</a></td><td class="col-level"><span class="badge-l5">L-5</span></td><td class="col-page"></td></tr>                            													
 							<tr><td class="col-sn">33</td><td class="col-name"><a href="#member-32" class="member-link">श्री रामजीलाल (पति पूनम, पुत्री रिद्धकरण)</a></td><td class="col-level"><span class="badge-l5">L-5</span></td><td class="col-page"></td></tr>                                   
 							<tr><td class="col-sn">34</td><td class="col-name"><a href="#member-33" class="member-link">श्री विजय कुमार (पति प्रिया, पुत्री रिद्धकरण)</a></td><td class="col-level"><span class="badge-l5">L-5</span></td><td class="col-page"></td></tr>		
                             <tr><td class="col-sn">35</td><td class="col-name"><a href="#member-34" class="member-link">श्री योगराज (पुत्र मूलचंद)</a></td><td class="col-level"><span class="badge-l4">L-4</span></td><td class="col-page"></td></tr>
@@ -1770,7 +1796,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 13%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody style="text-align: center">
+        <tbody class="update-table" style="text-align: center">
             <tr><td>1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">मंजू देवी</td><td>1982</td><td>10 वीं</td><td>श्री विनोद कुमार खटूमरिया, एडवोकेट</td><td>गृहणी</td><td>अम्बेडकर नगर</td></tr>
             <tr><td>2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">जसौदा देवी</td><td>17-02-1984</td><td>10 वीं</td><td>श्री रवि कुमार मोहनपुरिया</td><td>गृहणी</td><td>झोटवाड़ा</td></tr>
             <tr><td>3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">मुकेश कुमार</td><td>25-12-1986</td><td>B.Sc.</td><td>विवाहित</td><td>UDC, शिक्षा विभाग</td><td>-</td></tr>
@@ -1850,7 +1876,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">पलक</td><td style="text-align: center;">15-08-2016</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">मिष्टी</td><td style="text-align: center;">02-11-2018</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -1926,7 +1952,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">मौलिक</td><td style="text-align: center;">12-04-2014</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">रूही</td><td style="text-align: center;">30-09-2019</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -2003,7 +2029,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody  class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">अर्नव जलुथरिया</td><td style="text-align: center;">06-09-2020</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
     </table>
@@ -2083,7 +2109,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 13%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody style="text-align: center">
+        <tbody  class="update-table" style="text-align: center">
             <tr><td>1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">उषा देवी </td><td>23-08-1990</td><td>MA, BEd</td><td>श्री रवि कुमार मौर्य</td><td>-</td><td>चांदपोल</td></tr>
 			<tr><td>2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">मेघराज </td><td>01-08-1992</td><td>BA</td><td>अविवाहित</td><td>-</td><td>-</td></tr>
 			<tr><td>3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">जय कुमार </td><td>15-09-1994</td><td>MA</td><td>अविवाहित</td><td>-</td><td>-</td></tr>
@@ -2162,7 +2188,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody  class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">रुद्र मौर्य</td><td style="text-align: center;">19-03-2014</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
     </table>
@@ -2240,7 +2266,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 13%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody style="text-align: center">
+        <tbody  class="update-table" style="text-align: center">
             <tr><td>1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">डॉ सुभाष चंद</td><td>05-12-1975</td><td>M.Sc. Phd</td><td>किरण, उनियारा</td><td>-</td><td>अम्बेडकर नगर, जयपुर</td></tr>
             <tr><td>2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">कमल चंद</td><td>28-01-1979</td><td>B.Tech.</td><td>मीनाक्षी झिन्गीनिया</td><td>-</td><td>चांदपोल</td></tr>
             <tr><td>3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">सरस्वतीं देवी</td><td>20-06-1982</td><td>M.Sc. BEd.</td><td>श्री अशोक कुमार खोलिया, अध्यापक</td><td>-</td><td>गोनेर</td></tr>
@@ -2312,15 +2338,15 @@ body {
         <thead>
             <tr style="background-color: #b32d56; color: #ffffff;">
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 6%;">क्र.</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 16%;">नाम पुत्र/पुत्री</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 15%;">नाम पुत्र/पुत्री</th>
 				<th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 12%;">जन्म तिथि</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 8%;">शिक्षा</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 9%;">शिक्षा</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 27%;">वैवाहिक स्थिति</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 14%;">रोजगार</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 13%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody style="text-align: center">
+        <tbody  class="update-table" style="text-align: center">
             <tr><td>1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">सुमित्रा</td><td>12-11-1978</td><td>B.A. M.A. BEd.</td><td>श्री सुरेश राजोरिया, महला (अध्यापक)</td><td>-</td><td>-</td></tr>
 			<tr><td>2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">नरेश कुमार </td><td>17-09-1979</td><td>M.A. BEd.</td><td>राधा झिन्गीनिया, झोटवाड़ा</td><td>-</td><td>-</td></tr>
 			<tr><td>3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">प्रमिला</td><td>01-01-1981</td><td>B.A.</td><td>श्री भगवानसहाय टोलिया, निवाई</td><td>-</td><td>गोनेर</td></tr>
@@ -2400,7 +2426,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 13%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody style="text-align: center">
+        <tbody class="update-table" style="text-align: center">
             <tr><td>1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">देवेन्द्र</td><td>12-12-1988</td><td>M.A. BEd.</td><td>मोनिका टोलिया</td><td>Group D, Railway, Delhi</td><td>जन्सी</td></tr>
 			<tr><td>2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">मनोहर</td><td>23-12-1989</td><td>10 वीं</td><td>-</td><td>-</td><td>-</td></tr>
 			<tr><td>3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">सुनीता</td><td>1992</td><td>M.A.</td><td>श्री हेमराज जाजोरिया</td><td>-</td><td>अम्बेडकर नगर, नायला</td></tr>
@@ -2479,7 +2505,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 13%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody style="text-align: center">
+        <tbody class="update-table" style="text-align: center">
             <tr><td>1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">विनोद</td><td>01-01-1987</td><td>8 वीं</td><td>अंजू, लालसोट</td><td>-</td><td>-</td></tr>
 			<tr><td>1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">सुनील</td><td>01-01-1989</td><td>9 वीं</td><td>सुनीता</td><td>सहा. कर्म. नगर निगम</td><td>-</td></tr>
 			<tr><td>1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">दिनेश</td><td>25-05-1991</td><td>BA</td><td>पिंकी</td><td>-</td><td>-</td></tr>
@@ -2551,7 +2577,7 @@ body {
                 <div style="background: #fcf0f2; border: 1px solid #e0b0b9; padding: 5px 6px; border-radius: 4px; ">
                      <div style="color: #b32d56; font-weight: bold; font-size: 7.5pt; border-bottom: 1px dashed #e0b0b9; margin-bottom: 3px; padding-bottom: 2px;">सुपुत्रियाँ: </div>
                         <div style="font-size: 7pt; color: #333; line-height: 1.8;">
-                        • डाली (पुत्री)<br>• सांवित्री (पुत्री)<br>
+                        • डाली (पुत्री)<br>• सांवित्री (पुत्री)<br>• स्व. सम्पति (पुत्री)<br>
                     </div>
                 </div>
 
@@ -2564,7 +2590,7 @@ body {
                         <div style="background: #fcf0f2; border: 1px solid #e0b0b9; padding: 5px; border-radius: 4px;">
                             <div style="color: #b32d56; font-weight: bold; font-size: 7.5pt; border-bottom: 1px dashed #e0b0b9; margin-bottom: 4px; padding-bottom: 2px;">श्री देवीलाल <span style="font-size:5.5pt; font-weight:normal; color:#555;">(पुत्र)</span></div>
                             <div style="font-size: 6.5pt; color: #333; line-height: 1.6;">
-                                • महेश कुमार (पुत्र)<br>• कमल किशोर (पुत्र)<br>• बीना (पुत्री)<br>• अनिता (पुत्री)
+                                • महेश कुमार (पुत्र)<br>• कमल किशोर (पुत्र)<br>• बीना (पुत्री)<br>• अनिता (पुत्री)<br>• माला (पुत्री)
                             </div>
                         </div>
 
@@ -2588,7 +2614,7 @@ body {
                         <div style="background: #fcf0f2; border: 1px solid #e0b0b9; padding: 5px; border-radius: 4px;">
                             <div style="color: #b32d56; font-weight: bold; font-size: 7.5pt; border-bottom: 1px dashed #e0b0b9; margin-bottom: 4px; padding-bottom: 2px;">श्री योगराज <span style="font-size:5.5pt; font-weight:normal; color:#555;">(पुत्र)</span></div>
                             <div style="font-size: 6.5pt; color: #333; line-height: 1.6;">
-                                • रोहित (पुत्र)
+                                • रोहित (पुत्र)<br>• प्रतिभा (पुत्री)
                             </div>
                         </div>
 
@@ -2670,7 +2696,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 12%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr style="text-align: center"><td>1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री देवीलाल</td><td>-</td><td>8 वीं</td><td>-</td><td>सेवानिवृत, राजस्थान आवासन मंडल</td><td>घाटगेट</td></tr>
             <tr style="text-align: center"><td>2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री राजेंद्र कुमार</td><td>03-07-1963</td><td>10 वीं</td><td>-</td><td>सेवानिवृत, चिकित्सा विभाग</td><td>जगतपुरा</td></tr>
             <tr style="text-align: center"><td>3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री रिद्धकरण</td><td>1965</td><td>10 वीं</td><td>-</td><td>निधन: 03-01-1999</td><td>मानसरोवर</td></tr>
@@ -2749,7 +2775,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody  class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">मुकेश</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">विवाहित</td><td style="text-align: center;">पत्रकार</td><td style="text-align: center;">बौराज</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">कालू</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">विवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">बौराज</td></tr>
         </tbody>
@@ -2825,7 +2851,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">विष्णु</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">विवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">चांदपोल, जयपुर</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">वीरेन्द्र</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">विवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">चांदपोल, जयपुर</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">राहुल</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">विवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">चांदपोल, जयपुर</td></tr>
@@ -2906,7 +2932,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 13%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody style="text-align: center">
+        <tbody class="update-table" style="text-align: center">
             <tr><td>1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">महेश कुमार</td><td>20-08-1980</td><td>MA, BEd</td><td>विवाहित</td><td>स्वरोजगार</td><td>घाटगेट</td></tr>
             <tr><td>2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">कमल किशोर</td><td>25-04-1985</td><td>BA LLB</td><td>विवाहित</td><td>स्वरोजगार</td><td>घाटगेट</td></tr>
 			<tr><td>3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">बीना</td><td>01-01-1984</td><td>12 वीं</td><td>विवाहित</td><td>-</td><td>-</td></tr>
@@ -2985,7 +3011,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">मानवी</td><td style="text-align: center;">25-04-2018</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">हार्दिक</td><td style="text-align: center;">11-12-2024</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -3061,7 +3087,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">नितिन</td><td style="text-align: center;">17-06-2019</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">निखिल</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -3138,7 +3164,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <!-- <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr> -->
         </tbody>
@@ -3215,7 +3241,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <!-- <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr> -->
         </tbody>
@@ -3295,7 +3321,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 13%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody style="text-align: center">
+        <tbody class="update-table" style="text-align: center">
             <tr><td>1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">रूपेंद्र कुमार</td><td>01-11-1984</td><td>10 वीं</td><td>विवाहित</td><td>होमगार्ड</td><td>जगतपुरा</td></tr>
             <tr><td>2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">महेंद्र कुमार</td><td>25-02-1987</td><td>8 वीं</td><td>विवाहित</td><td>पेन्टर</td><td>जगतपुरा</td></tr>
             <tr><td>3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">जोगेंद्र कुमार</td><td>02-08-1990</td><td>12 वीं</td><td>विवाहित</td><td>होमगार्ड</td><td>जगतपुरा</td></tr>
@@ -3373,7 +3399,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">गौरव कुमार</td><td style="text-align: center;">21-10-2007</td><td style="text-align: center;">9वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">नीरज कुमार</td><td style="text-align: center;">14-09-2009</td><td style="text-align: center;">7वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -3451,7 +3477,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">केशव</td><td style="text-align: center;">10-03-2006</td><td style="text-align: center;">12वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">हेमलता</td><td style="text-align: center;">05-07-2008</td><td style="text-align: center;">8वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">निशा</td><td style="text-align: center;">31-03-2013</td><td style="text-align: center;">4थी</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
@@ -3529,7 +3555,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">भावेश</td><td style="text-align: center;">17-10-2010</td><td style="text-align: center;">9वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">हर्षिता</td><td style="text-align: center;">26-10-2013</td><td style="text-align: center;">5वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -3606,7 +3632,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">अर्जुन</td><td style="text-align: center;">26-10-1988</td><td style="text-align: center;">B.A., M.A., ITI</td><td style="text-align: center;">श्रीमती रेखा रैगर, धौली</td><td style="text-align: center;">सिलाई</td><td style="text-align: center;">बी-24, वरुण कॉलोनी, मानसरोवर</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">मुकेश</td><td style="text-align: center;">24-07-1992</td><td style="text-align: center;">B.A., M.A., ITI</td><td style="text-align: center;">श्रीमती मंजू, छोटा उदयपुरिया</td><td style="text-align: center;">प्लंबर</td><td style="text-align: center;">बी-24, वरुण कॉलोनी, मानसरोवर</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">जयकिशन</td><td style="text-align: center;">02-04-1995</td><td style="text-align: center;">B.Com, M.Com</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">बी-24, वरुण कॉलोनी, मानसरोवर</td></tr>
@@ -3687,7 +3713,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">हर्षित</td><td style="text-align: center;">18-12-2013</td><td style="text-align: center;">6वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">गर्वित</td><td style="text-align: center;">05-09-2017</td><td style="text-align: center;">2वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -3764,7 +3790,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">तेजस्वो</td><td style="text-align: center;">15-08-2021</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
     </table>
@@ -3839,7 +3865,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
     </table>
@@ -3915,7 +3941,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">निहारिका</td><td style="text-align: center;">08-01-2013</td><td style="text-align: center;">3वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">हिमांशु</td><td style="text-align: center;">13-08-2015</td><td style="text-align: center;">1वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">बाबू</td><td style="text-align: center;">30-01-2022</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
@@ -3993,7 +4019,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">पीयूष</td><td style="text-align: center;">24-07-2012</td><td style="text-align: center;">5वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">शुभम</td><td style="text-align: center;">09-01-2015</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">गौरव</td><td style="text-align: center;">19-08-2016</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
@@ -4071,7 +4097,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">रोहित कुमार</td><td style="text-align: center;">02-09-2000</td><td style="text-align: center;">B.Com</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">मानसरोवर, जयपुर</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">प्रतिभा कुमारी</td><td style="text-align: center;">16-08-2007</td><td style="text-align: center;">10th</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">मानसरोवर, जयपुर</td></tr>
         </tbody>
@@ -4146,7 +4172,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
     </table>
@@ -4340,7 +4366,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 16%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody style="text-align: center">
+        <tbody class="update-table" style="text-align: center">
             <tr><td>1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">जयनारायण</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
 			<tr><td>2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">बाबूलाल</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
 			<tr><td>3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">रामजीलाल</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
@@ -4416,7 +4442,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 15%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr style="text-align:center"><td>1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">गणेश</td><td>1979</td><td>10 वीं</td><td>श्रीमती संतोष देवी, मेहन्दवास, फागी</td><td>पेन्टर</td><td>गुर्जर की थडी, जयपुर</td></tr>
 			<tr style="text-align:center"><td>2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">सुरेश</td><td>1985</td><td>8 वीं</td><td>श्रीमती ममता देवी, सीतापुरा</td><td>पेन्टर</td><td>गुर्जर की थडी, जयपुर</td></tr>
 			<tr style="text-align:center"><td>3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">अशोक</td><td>1989</td><td>BA</td><td>श्रीमती सुलेखा, पावटा</td><td>-</td><td>-</td></tr>
@@ -4491,12 +4517,12 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 15%;">नाम पुत्र/पुत्री</th>
 				<th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 12%;">जन्म तिथि</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 7%;">शिक्षा</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 28%;">वैवाहिक स्थिति</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 15%;">रोजगार</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 12%;">वर्तमान पता</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 25%;">वैवाहिक स्थिति</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 19%;">रोजगार</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 11%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr style="text-align: center"><td>1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री चिरंजीलाल</td><td>10-01-1959</td><td>9 वों</td><td>श्रवणी देवी, महरोली, रींगस</td><td>सेवानिवृत, SMS हॉस्पिटल</td><td>घाटगेट</td></tr>
             <tr style="text-align: center"><td>5</td><td style="text-align: left; font-weight: bold; color: #b32d56;">नंदू देवी</td><td>01-01-1962</td><td>-</td><td>श्री प्रेमचंद राठाडिया, चौरू, फागी (सेवानिवृत, SMS हॉस्पिटल)</td><td>-</td><td>गुर्जर की थड़ी</td></tr>
             <tr style="text-align: center"><td>3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री नंदकिशोर</td><td>16-08-1964</td><td>9 वों</td><td>मंजू देवी, उदेपुरिया</td><td>सेवानिवृत, SMS हॉस्पिटल</td><td>सांगानेर</td></tr>
@@ -4572,12 +4598,12 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 16%;">नाम पुत्र/पुत्री</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 12%;">जन्म तिथि</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 10%;">शिक्षा</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 25%;">वैवाहिक स्थिति</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 14%;">रोजगार</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 22%;">वैवाहिक स्थिति</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">रोजगार</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">डॉ. मंजू</td><td style="text-align: center;">20-06-1981</td><td style="text-align: center;">BDS</td><td style="text-align: center;">स्व. श्री धर्मपाल जी, मालपुरा</td><td style="text-align: center;">डेंटल ऑफिसर, S.D.H., दूदू</td><td style="text-align: center;">गुर्जर की थड़ी</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">डॉ. धर्मेन्द्र</td><td style="text-align: center;">05-07-1983</td><td style="text-align: center;">MBBS, MS (ENT)</td><td style="text-align: center;">श्रीमती पिंकी, झुंझुनूं</td><td style="text-align: center;">मेडिकल ऑफिसर, S.D.H., जमवारामगढ़</td><td style="text-align: center;">गुर्जर की थड़ी</td></tr>
         </tbody>
@@ -4646,19 +4672,19 @@ body {
         <thead>
             <tr style="background-color: #b32d56; color: #ffffff;">
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 6%;">क्र.</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 16%;">नाम पुत्र/पुत्री</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 14%;">नाम पुत्र/पुत्री</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 12%;">जन्म तिथि</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 10%;">शिक्षा</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 25%;">वैवाहिक स्थिति</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 14%;">रोजगार</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 12%;">शिक्षा</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 27%;">वैवाहिक स्थिति</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 12%;">रोजगार</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">शंकरमल</td><td style="text-align: center;">15-05-1987</td><td style="text-align: center;">10th</td><td style="text-align: center;">सुनिता</td><td style="text-align: center;">प्रा. नौकरी</td><td style="text-align: center;">सांगानेर</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">विष्णु</td><td style="text-align: center;">16-11-1989</td><td style="text-align: center;">MA Poli. Sci.</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">लेखाकार</td><td style="text-align: center;">सांगानेर</td></tr>
-            <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">सुमन</td><td style="text-align: center;">1992</td><td style="text-align: center;">M. Com. EAFM</td><td style="text-align: center;">श्री निर्मल दोतानिया</td><td style="text-align: center;">प्रा. नौकरी</td><td style="text-align: center;">सांभर</td></tr>
-            <tr><td style="text-align: center;">4</td><td style="text-align: left; font-weight: bold; color: #b32d56;">कृष्णा</td><td style="text-align: center;">1994</td><td style="text-align: center;">B.Com</td><td style="text-align: center;">श्री महेंद्र जेलिया जी</td><td style="text-align: center;">लोको पायलेट, रेलवे</td><td style="text-align: center;">सांगानेर</td></tr>
+            <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">सुमन</td><td style="text-align: center;">1992</td><td style="text-align: center;">M. Com. EAFM</td><td style="text-align: center;">श्री निर्मल दोतानिया, प्रा. नौकरी</td><td style="text-align: center;">-</td><td style="text-align: center;">सांभर</td></tr>
+            <tr><td style="text-align: center;">4</td><td style="text-align: left; font-weight: bold; color: #b32d56;">कृष्णा</td><td style="text-align: center;">1994</td><td style="text-align: center;">B.Com</td><td style="text-align: center;">श्री महेंद्र जेलिया जी, लोको पायलेट, रेलवे</td><td style="text-align: center;">-</td><td style="text-align: center;">सांगानेर</td></tr>
         </tbody>
     </table>
 </div>
@@ -4732,7 +4758,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">आकाश</td><td style="text-align: center;">1995</td><td style="text-align: center;">8वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">स्वरोजगार</td><td style="text-align: center;">झोटवाड़ा</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">करण (गोलू)</td><td style="text-align: center;">1998</td><td style="text-align: center;">12वीं</td><td style="text-align: center;">श्रीमती अन्नू, निवाई</td><td style="text-align: center;">स्वरोजगार</td><td style="text-align: center;">सांगानेर</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">साहिल (हरीश)</td><td style="text-align: center;">2000</td><td style="text-align: center;">BA</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">स्वरोजगार</td><td style="text-align: center;">झोटवाड़ा</td></tr>
@@ -4801,15 +4827,15 @@ body {
         <thead>
             <tr style="background-color: #b32d56; color: #ffffff;">
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 6%;">क्र.</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 16%;">नाम पुत्र/पुत्री</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 14%;">नाम पुत्र/पुत्री</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 12%;">जन्म तिथि</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 10%;">शिक्षा</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 25%;">वैवाहिक स्थिति</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 14%;">रोजगार</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 16%;">रोजगार</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">मंजू</td><td style="text-align: center;">02-03-1983</td><td style="text-align: center;">M.A. History</td><td style="text-align: center;">विनोद कुमार बिलौनिया, प्रा. नौकरी, दूधली</td><td style="text-align: center;">गृहणी</td><td style="text-align: center;">जयंती नगर, आगरा रोड</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">गायत्री</td><td style="text-align: center;">05-11-1985</td><td style="text-align: center;">M.A. History</td><td style="text-align: center;">किशनलाल मुण्डोतिया, वरिष्ठ अध्यापक, किशनगढ़-रेनवाल</td><td style="text-align: center;">गृहणी</td><td style="text-align: center;">हाथोज, कालवाड़ रोड</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">पुष्पा</td><td style="text-align: center;">10-03-1986</td><td style="text-align: center;">M.Sc. Chemistry</td><td style="text-align: center;">बनवारीलाल पीपलीवाल, वरि. लेखाकार, चांदपोल</td><td style="text-align: center;">वरिष्ठ अध्यापक</td><td style="text-align: center;">शास्त्री नगर</td></tr>
@@ -4820,7 +4846,9 @@ body {
     </table>
 </div>
 
+
 <!---PAGE NO. 47--- 40. Omprakash_SO_ChiranjiLal -->
+
 <div class="page-container" >
 <!-- <div style="border: 2px double #d4af37; padding: 10px 12px; border-radius: 6px; background-color: #fffafb; box-sizing: border-box; font-family: 'Noto Sans Devanagari', Arial, sans-serif; font-size: 8pt; color: #222222; margin-bottom: 20px; page-break-after: always;"> -->
     <!-- <div style="background: linear-gradient(90deg, #fffafb 0%, #fbe8ec 50%, #fffafb 100%); border: 1px solid #d4af37; border-radius: 4px; padding: 3px 0; font-weight: bold; color: #b32d56; font-size: 11pt; text-align: center; margin-bottom: 2px;">|| सदस्य परिचय (क्र. सं. 83) ||</div> -->
@@ -4891,7 +4919,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">काशनी</td><td style="text-align: center;">26-11-2021</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">काशवी</td><td style="text-align: center;">26-11-2021</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -4969,7 +4997,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">पुर्वित</td><td style="text-align: center;">11-03-2020</td><td style="text-align: center;">1st</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">प्रिशा</td><td style="text-align: center;">20-01-2025</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -5046,7 +5074,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">आर्यन</td><td style="text-align: center;">10-10-2006</td><td style="text-align: center;">12वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">अक्षत</td><td style="text-align: center;">18-12-2010</td><td style="text-align: center;">8वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -5125,7 +5153,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">पीयूष</td><td style="text-align: center;">03-06-2009</td><td style="text-align: center;">12वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">दिव्यांश</td><td style="text-align: center;">06-03-2015</td><td style="text-align: center;">7वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -5204,7 +5232,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">आरव</td><td style="text-align: center;">11-10-2018</td><td style="text-align: center;">3वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
         </tbody>
     </table>
@@ -5280,7 +5308,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">अभिनव</td><td style="text-align: center;">17-04-2024</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
     </table>
@@ -5303,7 +5331,7 @@ body {
                 <div style="color: #b32d56; font-size: 8.5pt; border-left: 3.5px solid #b32d56; border-bottom: 1px solid #d4af37; padding-left: 5px; padding-bottom: 2px; margin-top: 0; margin-bottom: 6px; font-weight: bold; background-color: #fcf0f2;">मुखिया परिचय</div>
                 <div style="margin-bottom: 3px; font-size: 9pt; font-weight: bold; color: #b32d56;">श्री नन्दकिशोर जलुथरिया</div>
                 <div style="margin-bottom: 3px; font-size: 7.8pt;"><span style="font-weight: bold; color: #b32d56;">पिता/मूल निवास:</span> श्री मोतीलाल जलुथरिया, घाटगेट (पोलीवाला)</div>
-                <div style="margin-bottom: 3px; font-size: 7.8pt;"><span style="font-weight: bold; color: #b32d56;">जन्म/व्यवसाय:</span> 18-08-1964 (SMS Hospital, जयपुर)</div>
+                <div style="margin-bottom: 3px; font-size: 7.8pt;"><span style="font-weight: bold; color: #b32d56;">जन्म/व्यवसाय:</span> 18-08-1964 (सेवानिवृत: SMS Hospital, जयपुर)</div>
                 <div style="margin-bottom: 3px; font-size: 7.8pt;"><span style="font-weight: bold; color: #b32d56;">वर्तमान पता/मो.:</span> 11-12, शक्ति बिहार, कल्याणपुरा, सांगानेर, जयपुर (मो.- 9351498610)</div>
             </td>
             <td style="width: 50%; padding-left: 8px; vertical-align: top; border: none; background: transparent;">
@@ -5355,7 +5383,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">कमल किशोर</td><td style="text-align: center;">06-04-1987</td><td style="text-align: center;">B.A., B.Ed.</td><td style="text-align: center;">मीनाक्षी, मुरलीपुरा</td><td style="text-align: center;">दुकान</td><td style="text-align: center;">सांगानेर, जयपुर</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">देवकी नंदन</td><td style="text-align: center;">14-01-1989</td><td style="text-align: center;">BDS</td><td style="text-align: center;">हैप्पी, गजसिंहपुरा</td><td style="text-align: center;">क्लिनिक</td><td style="text-align: center;">सांगानेर, जयपुर</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">कृष्ण कुमार</td><td style="text-align: center;">02-08-1991</td><td style="text-align: center;">B.Pharma</td><td style="text-align: center;">ममता, हरमाड़ा</td><td style="text-align: center;">फार्मासिस्ट</td><td style="text-align: center;">सांगानेर, जयपुर</td></tr>
@@ -5433,7 +5461,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">लकी</td><td style="text-align: center;">10-12-2008</td><td style="text-align: center;">7th</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">पूर्वा</td><td style="text-align: center;">10-06-2013</td><td style="text-align: center;">5rd</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -5510,7 +5538,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">-</td><td style="text-align: left; font-weight: bold; color: #b32d56;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
     </table>
@@ -5586,7 +5614,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">पुत्र</td><td style="text-align: center;">30-06-2022</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
     </table>
@@ -5614,8 +5642,8 @@ body {
             </td>
             <td style="width: 50%; padding-left: 8px; vertical-align: top; border: none; background: transparent;">
                 <div style="color: #b32d56; font-size: 8.5pt; border-left: 3.5px solid #b32d56; border-bottom: 1px solid #d4af37; padding-left: 5px; padding-bottom: 2px; margin-top: 0; margin-bottom: 6px; font-weight: bold; background-color: #fcf0f2;">श्रीमती का परिचय</div>
-                <div style="margin-bottom: 3px; font-size: 9pt; font-weight: bold; color: #b32d56;">श्रीमती फूली देवी</div>
-                <div style="margin-bottom: 3px; font-size: 7.8pt;"><span style="font-weight: bold; color: #b32d56;">पिता व निवास:</span> श्री रामचंद्र झिंगीनिया, चांदपोल बाजार, जयपुर</div>
+                <div style="margin-bottom: 3px; font-size: 9pt; font-weight: bold; color: #b32d56;">श्रीमती फूला देवी</div>
+                <div style="margin-bottom: 3px; font-size: 7.8pt;"><span style="font-weight: bold; color: #b32d56;">पिता व निवास:</span> श्री रामचंद्र झिंगीनिया, चांदपोल, जयपुर</div>
             </td>
         </tr>
     </table>
@@ -5652,15 +5680,15 @@ body {
         <thead>
             <tr style="background-color: #b32d56; color: #ffffff;">
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 6%;">क्र.</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 16%;">नाम पुत्र/पुत्री</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 15%;">नाम पुत्र/पुत्री</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 12%;">जन्म तिथि</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 10%;">शिक्षा</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 25%;">वैवाहिक स्थिति</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 14%;">रोजगार</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 11%;">शिक्षा</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 27%;">वैवाहिक स्थिति</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 11%;">रोजगार</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 19%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">पिंकी</td><td style="text-align: center;">1987</td><td style="text-align: center;">12th</td><td style="text-align: center;">सुरेश खोवाल, वरिष्ठ सहायक (UDC)</td><td style="text-align: center;">-</td><td style="text-align: center;">सोडाला (केला का बास)</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">लक्ष्मी</td><td style="text-align: center;">1989</td><td style="text-align: center;">M.A. B.Ed.</td><td style="text-align: center;">रमेश खोवाल, स्कूल व्याख्याता</td><td style="text-align: center;">-</td><td style="text-align: center;">सोडाला (केला का बास)</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">राजकुमार</td><td style="text-align: center;">01-12-1993</td><td style="text-align: center;">B.A.</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">UDC, सेशन कोर्ट</td><td style="text-align: center;">जयपुर</td></tr>
@@ -5739,7 +5767,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">अरविन</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">ऋषभ</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -5815,7 +5843,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">-</td><td style="text-align: left; font-weight: bold; color: #b32d56;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
     </table>
@@ -5890,7 +5918,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">जियांश</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">हर्षिता</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -5966,7 +5994,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
     </table>
@@ -6040,7 +6068,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">चित्रांश</td><td style="text-align: center;">2022</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
 			<tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">प्रणय</td><td style="text-align: center;">2023</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -6115,7 +6143,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">कुन्दनलाल</td><td style="text-align: center;">1987</td><td style="text-align: center;">10th</td><td style="text-align: center;">ममता, गजसिंहपुरा</td><td style="text-align: center;">प्रा. नौकरी</td><td style="text-align: center;">जयपुर</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">अन्नू</td><td style="text-align: center;">10-06-1989</td><td style="text-align: center;">10th</td><td style="text-align: center;">विजय, खोरा-बिसल</td><td style="text-align: center;">गृहणी</td><td style="text-align: center;">खोरा-बिसल</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">लोकेश</td><td style="text-align: center;">24-09-1991</td><td style="text-align: center;">8th</td><td style="text-align: center;">सरोज, जयसिंहपुरा खोर</td><td style="text-align: center;">प्रा. नौकरी</td><td style="text-align: center;">जयपुर</td></tr>
@@ -6192,7 +6220,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">गुंजन (खुशी)</td><td style="text-align: center;">24-10-2010</td><td style="text-align: center;">11वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">एकांश</td><td style="text-align: center;">18-02-2013</td><td style="text-align: center;">9वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -6268,7 +6296,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">सृष्टि</td><td style="text-align: center;">08-07-2023</td><td style="text-align: center;">प्रेप</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
     </table>
@@ -6344,7 +6372,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">यूल</td><td style="text-align: center;">2012</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">सक्षम</td><td style="text-align: center;">2014</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -6428,7 +6456,7 @@ body {
                         <div style="background: #fcf0f2; border: 1px solid #e0b0b9; padding: 6px; border-radius: 4px;">
                             <div style="color: #b32d56; font-weight: bold; font-size: 8pt; border-bottom: 1px dashed #e0b0b9; margin-bottom: 5px; padding-bottom: 2px;">श्री मनोज <span style="font-size:6pt; font-weight:normal; color:#555;">(पुत्र)</span></div>
                             <div style="font-size: 7pt; color: #333; line-height: 1.6;">
-                                • संजय (पुत्र)
+                                • संजय (पुत्र)<br>• नीलम (पुत्री)
                             </div>
                         </div>
 
@@ -6436,7 +6464,7 @@ body {
                         <div style="background: #fcf0f2; border: 1px solid #e0b0b9; padding: 6px; border-radius: 4px;">
                             <div style="color: #b32d56; font-weight: bold; font-size: 8pt; border-bottom: 1px dashed #e0b0b9; margin-bottom: 5px; padding-bottom: 2px;">श्री शंकर <span style="font-size:6pt; font-weight:normal; color:#555;">(पुत्र)</span></div>
                             <div style="font-size: 7pt; color: #333; line-height: 1.6;">
-                                —
+                                • आकाश (पुत्र)<br>• पूजा (पुत्री)<br>• विकास (पुत्र)
                             </div>
                         </div>
 
@@ -6444,7 +6472,7 @@ body {
                         <div style="background: #fcf0f2; border: 1px solid #e0b0b9; padding: 6px; border-radius: 4px;">
                             <div style="color: #b32d56; font-weight: bold; font-size: 8pt; border-bottom: 1px dashed #e0b0b9; margin-bottom: 5px; padding-bottom: 2px;">श्री किशन कुमार <span style="font-size:6pt; font-weight:normal; color:#555;">(पुत्र)</span></div>
                             <div style="font-size: 7pt; color: #333; line-height: 1.6;">
-                                —
+                                • जतिन (पुत्र)<br>• दीपक (पुत्र)
                             </div>
                         </div>
 
@@ -6534,7 +6562,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 15%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr style="text-align: center"><td>1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री मनोज</td><td>02-07-1971</td><td>5 वीं</td><td>विमला, गीता देवी</td><td>मजदूरी</td><td>जगतपुरा</td></tr>
             <tr style="text-align: center"><td>2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री हरिशंकर</td><td>02-02-1977</td><td>9 वीं</td><td>शकुन्तला देवी</td><td>मजदूरी</td><td>घाटगेट</td></tr>
             <tr style="text-align: center"><td>3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री किशन कुमार</td><td>02-07-1979</td><td>8 वीं</td><td>सुशीला देवी, जगतपुरा</td><td>मजदूरी</td><td>घाटगेट</td></tr>
@@ -6613,7 +6641,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">ओमप्रकाश</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">प्रियंका</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">मंजू</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">राजेश</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -6689,7 +6717,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">सुमन</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">विवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">सीमा</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">विवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">राधा</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">विवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
@@ -6769,7 +6797,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">संजय</td><td style="text-align: center;">04.01.1996</td><td style="text-align: center;">-</td><td style="text-align: center;">कोमल (कौशल्या)</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">नीलम</td><td style="text-align: center;">25.10.2000</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -6845,7 +6873,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">युवांश</td><td style="text-align: center;">04-01-2018</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">चैतन्य</td><td style="text-align: center;">03-07-2021</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -6921,7 +6949,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">आकाश</td><td style="text-align: center;">18.12.2000</td><td style="text-align: center;">BA</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">पूजा</td><td style="text-align: center;">08.06.2003</td><td style="text-align: center;">12वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">विकास</td><td style="text-align: center;">12.12.2008</td><td style="text-align: center;">8वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
@@ -6998,7 +7026,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">जतिन</td><td style="text-align: center;">03.07.2007</td><td style="text-align: center;">10वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">दीपक</td><td style="text-align: center;">27.05.2011</td><td style="text-align: center;">5वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -7103,15 +7131,23 @@ body {
                         <div style="background: #fcf0f2; border: 1px solid #e0b0b9; padding: 5px; border-radius: 4px;">
                             <div style="color: #b32d56; font-weight: bold; font-size: 7.5pt; border-bottom: 1px dashed #e0b0b9; margin-bottom: 4px; padding-bottom: 2px;">श्री मिठ्ठूचंद <span style="font-size:5.5pt; font-weight:normal; color:#555;">(पुत्र)</span></div>
                             <div style="font-size: 6.5pt; color: #333; line-height: 1.6;">
-                                • यादराम (पुत्र)<br>• कैलाश चंद (पुत्र)<br>• शंकरलाल (पुत्र)<br>• कमला (पुत्री)<br>• हीरा (पुत्री)<br>• सुशीला (पुत्री)<br>• माया (पुत्री)<br>• यशोदा (पुत्री)
+                                • गुलाबचन्द (पुत्र)<br>• यादराम (पुत्र)<br>• कैलाश चंद (पुत्र)<br>• शंकरलाल (पुत्र)<br>• महेश (पुत्र)<br>• कमला (पुत्री)<br>• हीरा (पुत्री)<br>• सुशीला (पुत्री)<br>• माया (पुत्री)<br>• यशोदा (पुत्री)
                             </div>
                         </div>
 
-                        <!-- रामसहाय व प्रहलादराम -->
+                        <!-- रामसहाय -->
                         <div style="background: #fcf0f2; border: 1px solid #e0b0b9; padding: 5px; border-radius: 4px;">
-                            <div style="color: #b32d56; font-weight: bold; font-size: 7.5pt; border-bottom: 1px dashed #e0b0b9; margin-bottom: 4px; padding-bottom: 2px;">श्री रामसहाय व प्रहलादराम</div>
+                            <div style="color: #b32d56; font-weight: bold; font-size: 7.5pt; border-bottom: 1px dashed #e0b0b9; margin-bottom: 4px; padding-bottom: 2px;">श्री रामसहाय <span style="font-size:5.5pt; font-weight:normal; color:#555;">(पुत्र)</span></div>
                             <div style="font-size: 6.5pt; color: #333; line-height: 1.6;">
-                                • अशोक कुमार (पुत्र)<br>• जितेंद्र कुमार (पुत्र)<br>• लालचंद (पुत्र)<br>• रूपचंद (पुत्र)<br>• हेमंत कुमार (पुत्र)<br>• कमल कुमार (पुत्र)
+                                • अशोक कुमार (पुत्र)<br>• जितेंद्र कुमार (पुत्र)<br>• लालचंद (पुत्र)<br>• रूपचंद (पुत्र)<br>• विमला (पुत्री)<br>• कान्ता (पुत्री)
+                            </div>
+                        </div>
+						
+						<!-- प्रहलादराम -->
+						<div style="background: #fcf0f2; border: 1px solid #e0b0b9; padding: 5px; border-radius: 4px;">
+                            <div style="color: #b32d56; font-weight: bold; font-size: 7.5pt; border-bottom: 1px dashed #e0b0b9; margin-bottom: 4px; padding-bottom: 2px;">श्री प्रहलादराम <span style="font-size:5.5pt; font-weight:normal; color:#555;">(पुत्र)</span></div>
+                            <div style="font-size: 6.5pt; color: #333; line-height: 1.6;">
+                                • इन्दरराज (छितर) (पुत्र)<br>• हेमंत (बबलू) (पुत्र)<br>• कमल (पुत्र)<br>• संतोष (पुत्री)
                             </div>
                         </div>
 
@@ -7192,7 +7228,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 16%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody style="text-align: center">
+        <tbody class="update-table" style="text-align: center">
             <tr><td>1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">भोमाराम </td><td>-</td><td>श्रीमती नाथी देवी</td><td>-</td><td>-</td></tr>
         </tbody>
     </table>
@@ -7263,13 +7299,13 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 6%;">क्र.</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 16%;">नाम पुत्र/पुत्री</th>
 				<th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 12%;">जन्म तिथि</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 15%;">शिक्षा</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 20%;">वैवाहिक स्थिति</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 18%;">शिक्षा</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वैवाहिक स्थिति</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 14%;">रोजगार</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 13%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody style="text-align: center">
+        <tbody class="update-table" style="text-align: center">
             <tr><td>1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">सुशीला</td><td>11-05-1966</td><td>BA</td><td>विवाहित</td><td>सरकारी कर्मचारी</td><td>अजमेर</td></tr>
 			<tr><td>2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">कंचन</td><td>14-11-1967</td><td>MA, MEd.</td><td>विवाहित</td><td>सरकारी कर्मचारी</td><td>अजमेर</td></tr>
 			<tr><td>3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">गीता</td><td>26-10-1976</td><td>BA</td><td>विवाहित</td><td>गृहणी</td><td>केकड़ी</td></tr>
@@ -7350,7 +7386,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 20%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr style="text-align: center"><td>1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री ओमप्रकाश</td><td>01-08-1965</td><td>नॉन मेट्रिक</td><td>ललिता देवी</td><td>-</td><td>सोफिया स्कूल के पीछे</td></tr>
             <tr style="text-align: center"><td>2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री राजकुमार</td><td>08-04-1979</td><td>12 वीं</td><td>उगन्ता देवी </td><td>-</td><td>सोफिया स्कूल के पीछे</td></tr>
             <tr style="text-align: center"><td>3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री सुभाष</td><td>14-06-1978</td><td>माध्यमिक</td><td>माया देवी</td><td>-</td><td>सोफिया स्कूल के पीछे</td></tr>
@@ -7429,7 +7465,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">तेजस्वनी (म.)</td><td style="text-align: center;">21.08.1996</td><td style="text-align: center;">BA BEd</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">प्रवीण (पु.)</td><td style="text-align: center;">26.11.1997</td><td style="text-align: center;">12वीं ITI</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">दुर्गेश (पु.)</td><td style="text-align: center;">04.09.2001</td><td style="text-align: center;">12वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
@@ -7501,13 +7537,13 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 6%;">क्र.</th>
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 16%;">नाम पुत्र/पुत्री</th>
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 12%;">जन्म तिथि</th>
-                <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 10%;">शिक्षा</th>
+                <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 12%;">शिक्षा</th>
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 25%;">वैवाहिक स्थिति</th>
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 14%;">रोजगार</th>
-                <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
+                <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 15%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">वन्दना</td><td style="text-align: center;">26.08.1997</td><td style="text-align: center;">MBBS</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">प्रिया</td><td style="text-align: center;">11.12.1998</td><td style="text-align: center;">8वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">विपुल</td><td style="text-align: center;">17.10.2000</td><td style="text-align: center;">12वीं NEET</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
@@ -7580,13 +7616,13 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 6%;">क्र.</th>
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 16%;">नाम पुत्र/पुत्री</th>
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 12%;">जन्म तिथि</th>
-                <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 10%;">शिक्षा</th>
+                <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 12%;">शिक्षा</th>
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 25%;">वैवाहिक स्थिति</th>
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 14%;">रोजगार</th>
-                <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
+                <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 15%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">यशराज</td><td style="text-align: center;">09.09.1995</td><td style="text-align: center;">M. Com</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">व्यापार</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">नवीन कुमार</td><td style="text-align: center;">03.11.1998</td><td style="text-align: center;">B. Com</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">रोहिणी</td><td style="text-align: center;">10.07.2000</td><td style="text-align: center;">12वीं NEET</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
@@ -7602,7 +7638,7 @@ body {
 	<div style="color: #d4af37; font-size: 8.5pt; margin: 2px 0 8px 0; text-align: center;">❖ ═════════════ •❖• ═════════════ ❖</div>
     <div style="text-align: center; margin-bottom: 12px;">
         <div style="width: 80mm; height: 54mm; border: 2px double #d4af37; padding: 2px; border-radius: 5px; background-color: #ffffff; display: inline-block; box-shadow: 0px 2px 4px rgba(179, 45, 86, 0.12); text-align: center; box-sizing: border-box;">
-            <img src="Photos/Level 4 (1)(3)(1)(4) Sitaram_SO_Nanagram.jpeg" alt="Member Photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 3px;">
+            <img src="Photos/Level 4 (1)(3)(1)(4) Sitaram_SO_Nanagram.jpeg" alt="Member Photo" style="width: 50%; height: 100%; object-fit: cover; border-radius: 3px;">
         </div>
     </div>
     <table style="width: 100%; border-collapse: collapse; margin-bottom: 12px; border: none;">
@@ -7663,7 +7699,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">जयकुमार</td><td style="text-align: center;">03.09.1998</td><td style="text-align: center;">12वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">नितिन कुमार</td><td style="text-align: center;">29.10.2000</td><td style="text-align: center;">12वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">सुमित</td><td style="text-align: center;">03.11.2003</td><td style="text-align: center;">11वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
@@ -7803,7 +7839,6 @@ body {
                 <div style="margin-bottom: 3px; font-size: 9pt; font-weight: bold; color: #b32d56;">श्री सुंदरलाल जलुथरिया</div>
                 <div style="margin-bottom: 3px; font-size: 7.8pt;"><span style="font-weight: bold; color: #b32d56;">पिता/मूल निवास:</span> श्री कुशलाराम जलुथरिया, 3325, घाटगेट</div>
                 <div style="margin-bottom: 3px; font-size: 7.8pt;"><span style="font-weight: bold; color: #b32d56;">माता का नाम:</span> श्रीमती जमना देवी </div>
-                <div style="margin-bottom: 3px; font-size: 7.8pt;"><span style="font-weight: bold; color: #b32d56;">वर्तमान पता:</span> शास्त्री नगर, जयपुर</div>
 				<div style="margin-bottom: 3px; font-size: 7.8pt;"><span style="font-weight: bold; color: #b32d56;">जन्म:</span> 07-04-1934</div>
                 <div style="margin-bottom: 3px; font-size: 7.8pt;"><span style="font-weight: bold; color: #b32d56;">शिक्षा/व्यवसाय:</span> माध्यमिक / आयकर विभाग (सेवानिवृत्त:30-04-1992)</div>
 				<div style="margin-bottom: 3px; font-size: 7.8pt;"><span style="font-weight: bold; color: #b32d56;">निधन:</span> 22.05.2014</div>
@@ -7814,6 +7849,7 @@ body {
                 <div style="margin-bottom: 3px; font-size: 7.8pt;"><span style="font-weight: bold; color: #b32d56;">पिता व निवास:</span> श्री पेमाराम गाढागावालिया, जोबनेर, जयपुर</div>
 				<div style="margin-bottom: 3px; font-size: 7.8pt;"><span style="font-weight: bold; color: #b32d56;">जन्म:</span> 17-09-1938</div>
 				<div style="margin-bottom: 3px; font-size: 7.8pt;"><span style="font-weight: bold; color: #b32d56;">निधन:</span> 27.03.1974</div>
+                <div style="margin-bottom: 3px; font-size: 7.8pt;"><span style="font-weight: bold; color: #b32d56;">वर्तमान पता:</span> शास्त्री नगर, जयपुर</div>
             </td>
         </tr>
     </table>
@@ -7858,7 +7894,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 8%;">पता</th>
             </tr>
         </thead>
-        <tbody style="text-align: center">
+        <tbody class="update-table" style="text-align: center">
             <tr><td>1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री सुरेंद्र कुमार</td><td>28-08-1957</td><td>B.Com, MA (Pol. Sci.)</td><td>मनभर देवी</td><td>Rtd.: प्रभारी / मेनेजर-IV, UIICO, HQ, जयपुर </td><td>जयपुर</td></tr>
             <tr><td>2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री घनश्यामदास</td><td>15-11-1959</td><td>B.Com, M.Com</td><td>भगवन्ती देवी</td><td>Rtd.: सहा. प्रशा. अधि., कलेक्ट्रेट, जयपुर</td><td>जयपुर</td></tr>
             <tr><td>3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री दौलतराम</td><td>16-08-1965</td><td>B.Com</td><td>उषा देवी</td><td>Rtd.: नेशनल इन्शो. क. लि. जयपुर</td><td>जयपुर</td></tr>
@@ -7938,7 +7974,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">देवेंद्र कुमारी</td><td style="text-align: center;">23-09-1993</td><td style="text-align: center;">MA, B.Ed.</td><td style="text-align: center;">श्रीमती सुकृति</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">रविन्द्र कुमार</td><td style="text-align: center;">12-01-1990</td><td style="text-align: center;">BAMS, MD</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">प्रतिभा (पूनम)</td><td style="text-align: center;">23-09-1991</td><td style="text-align: center;">B.Sc. Ag</td><td style="text-align: center;">श्री मनीष महोलिया (22-11-2021)</td><td style="text-align: center;">मैनेजर, केनरा बैंक</td><td style="text-align: center;">-</td></tr>
@@ -8015,7 +8051,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">भास्कर</td><td style="text-align: center;">-</td><td style="text-align: center;">MA</td><td style="text-align: center;">विवाहित, कुण्डल</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">गजानंद / गौरव</td><td style="text-align: center;">30-08-1993</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">योगबाला</td><td style="text-align: center;">19-01-2004</td><td style="text-align: center;">12वीं</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
@@ -8091,7 +8127,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">सुनील कुमार</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">प्रियंका</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">उर्मिला</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
@@ -8163,14 +8199,14 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 6%;">क्र.</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 16%;">नाम पुत्र/पुत्री</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 12%;">जन्म तिथि</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 15%;">शिक्षा</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 20%;">वैवाहिक स्थिति</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 14%;">रोजगार</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 14%;">वर्तमान पता</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 20%;">शिक्षा</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 14%;">वैवाहिक स्थिति</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">रोजगार</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 12%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
-            <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">जुगनू कुमार</td><td style="text-align: center;">12-05-1974</td><td style="text-align: center;">BSc, MA. Pol. Sci. & Pub. Adm.</td><td style="text-align: center;">विवाहित</td><td style="text-align: center;">राज. सचिवालय</td><td style="text-align: center;">-</td></tr>
+        <tbody class="update-table">
+            <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">जुगनू कुमार</td><td style="text-align: center;">12-05-1974</td><td style="text-align: center;">BSc, MA. Pol. Sci. & Pub. Adm.</td><td style="text-align: center;">विवाहित</td><td style="text-align: center;">राजस्थान सचिवालय</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">सुनील कुमार</td><td style="text-align: center;">07-09-1976</td><td style="text-align: center;">MSc. Microbio</td><td style="text-align: center;">विवाहित</td><td style="text-align: center;">स्टेट बैंक ऑफ इंडिया</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">प्रदीप कुमार</td><td style="text-align: center;">20-01-1979</td><td style="text-align: center;">BCom, LLB, Diploma (Labour Law)</td><td style="text-align: center;">विवाहित</td><td style="text-align: center;">Manager, HDFC-Ergo</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">4</td><td style="text-align: left; font-weight: bold; color: #b32d56;">पूनम कुमारी</td><td style="text-align: center;">02-12-1980</td><td style="text-align: center;">M.A. Eng, LLM</td><td style="text-align: center;">विवाहित</td><td style="text-align: center;">राजस्थान सचिवालय</td><td style="text-align: center;">-</td></tr>
@@ -8244,13 +8280,13 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 6%;">क्र.</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 16%;">नाम पुत्र/पुत्री</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 12%;">जन्म तिथि</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 10%;">शिक्षा</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 25%;">वैवाहिक स्थिति</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 12%;">शिक्षा</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 23%;">वैवाहिक स्थिति</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 14%;">रोजगार</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">धनंजय</td><td style="text-align: center;">02-06-1999</td><td style="text-align: center;">BA, LLB</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">Advocate</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">अनिमेष</td><td style="text-align: center;">31-07-2003</td><td style="text-align: center;">BA, MSc. IT</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -8321,13 +8357,13 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 6%;">क्र.</th>
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 16%;">नाम पुत्र/पुत्री</th>
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 12%;">जन्म तिथि</th>
-                <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 10%;">शिक्षा</th>
-                <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 25%;">वैवाहिक स्थिति</th>
+                <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 12%;">शिक्षा</th>
+                <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 23%;">वैवाहिक स्थिति</th>
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 14%;">रोजगार</th>
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">उदित</td><td style="text-align: center;">13-07-2004</td><td style="text-align: center;">BCA</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">स्तुति</td><td style="text-align: center;">21-05-2006</td><td style="text-align: center;">BSc. 2nd Yr.</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -8405,7 +8441,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">गोरवी</td><td style="text-align: center;">04-11-2011</td><td style="text-align: center;">10th</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">दृष्टि</td><td style="text-align: center;">20-09-2014</td><td style="text-align: center;">6th</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -8476,13 +8512,13 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 6%;">क्र.</th>
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 16%;">नाम पुत्र/पुत्री</th>
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 12%;">जन्म तिथि</th>
-                <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 10%;">शिक्षा</th>
-                <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 25%;">वैवाहिक स्थिति</th>
+                <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 12%;">शिक्षा</th>
+                <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 23%;">वैवाहिक स्थिति</th>
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 14%;">रोजगार</th>
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">जैसमीन</td><td style="text-align: center;">06-12-2005</td><td style="text-align: center;">MBBS 1st Yr</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">कार्तिकेय</td><td style="text-align: center;">13-04-2011</td><td style="text-align: center;">10th</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -8558,7 +8594,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">हृदयांशी</td><td style="text-align: center;">13-12-2011</td><td style="text-align: center;">10th</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">हृदयांश</td><td style="text-align: center;">15-01-2018</td><td style="text-align: center;">3rd</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -8633,7 +8669,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">-</td><td style="text-align: left; font-weight: bold; color: #b32d56;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
     </table>
@@ -8708,7 +8744,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">बीना</td><td style="text-align: center;">23-11-1980</td><td style="text-align: center;">MA. BEd.</td><td style="text-align: center;">विवाहित, वैशाली नगर</td><td style="text-align: center;">गृहणी</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">ममता</td><td style="text-align: center;">20-05-1983</td><td style="text-align: center;">MA. BEd.</td><td style="text-align: center;">विवाहित, बूरथल</td><td style="text-align: center;">गृहणी</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">रजनी</td><td style="text-align: center;">27-05-1985</td><td style="text-align: center;">MA. MPhil</td><td style="text-align: center;">विवाहित, दौसा</td><td style="text-align: center;">व्याख्याता</td><td style="text-align: center;">-</td></tr>
@@ -8787,7 +8823,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">नेहल कुमारी</td><td style="text-align: center;">01-10-2003</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">गर्वित कुमार</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -8862,7 +8898,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">अरविंद (सिद्धार्थ)</td><td style="text-align: center;">28-08-2013</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">अयान</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -8939,7 +8975,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">तन्वी</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">तृति</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -9015,7 +9051,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">फाल्गुनी</td><td style="text-align: center;">13-02-2018</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
     </table>
@@ -9090,7 +9126,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">नव्या</td><td style="text-align: center;">09-04-2023</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
     </table>
@@ -9159,13 +9195,13 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 6%;">क्र.</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 16%;">नाम पुत्र/पुत्री</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 12%;">जन्म तिथि</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 10%;">शिक्षा</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 12%;">शिक्षा</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 25%;">वैवाहिक स्थिति</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 14%;">रोजगार</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 12%;">रोजगार</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">मनीष कुमार (पु.)</td><td style="text-align: center;">18-08-1994</td><td style="text-align: center;">MA. Pol. Sci.</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">प्रीति (म.)</td><td style="text-align: center;">10-12-1990</td><td style="text-align: center;">B. Com, M.Com. LLB</td><td style="text-align: center;">डॉ. कपिल लबानिया, महेश नगर</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -9239,7 +9275,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">-</td><td style="text-align: left; font-weight: bold; color: #b32d56;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
     </table>
@@ -9313,7 +9349,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">इनाया (म.)</td><td style="text-align: center;">04-10-2018</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">आर्या (पु.)</td><td style="text-align: center;">23-09-2021</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -9391,7 +9427,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 16%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody style="text-align: center">
+        <tbody class="update-table" style="text-align: center">
             <tr><td>1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री गुलाबचँद</td><td>-</td><td>अविवाहित</td><td>-</td><td>घाटगेट, जयपुर</td></tr>
 			<tr><td>2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री यादराम</td><td>-</td><td>पार्वती देवी</td><td>-</td><td>निधन: 15-10-2015</td></tr>
             <tr><td>3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री कैलाशचंद</td><td>-</td><td>निर्मला देवी</td><td>-</td><td>घाटगेट, जयपुर</td></tr>
@@ -9473,7 +9509,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">कविता</td><td style="text-align: center;">26-11-2002</td><td style="text-align: center;">BA</td><td style="text-align: center;">विवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">रोहित</td><td style="text-align: center;">10-01-2003</td><td style="text-align: center;">BA</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">रेणु</td><td style="text-align: center;">21-03-2004</td><td style="text-align: center;">BA</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
@@ -9549,7 +9585,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">रजनी</td><td style="text-align: center;">17-09-2004</td><td style="text-align: center;">12वीं</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">चेतना</td><td style="text-align: center;">01-01-2008</td><td style="text-align: center;">10वीं</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">कोमल कुमारी</td><td style="text-align: center;">26-08-2010</td><td style="text-align: center;">7वीं</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
@@ -9627,7 +9663,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">शैलेन्द्र</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">कुमारी हीना</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -9701,7 +9737,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">नौशर्ति</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">प्रकाश</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">कालूराम</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
@@ -9776,7 +9812,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">गीता</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">विवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">रजनी</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">विवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">पूरम</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">विवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
@@ -9852,7 +9888,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">अजय</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">विवाहित (12-03-2019)</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">जीतू</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">विवाहित (10-12-2019)</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">चांदनी कुमारी</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">विवाहित (25-11-2020)</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
@@ -9928,7 +9964,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
     </table>
@@ -10001,7 +10037,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">राहुल</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">भूपेंद्र</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -10075,18 +10111,18 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 16%;">नाम पुत्र/पुत्री</th>
 				<th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 12%;">जन्म तिथि</th>
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 8%;">शिक्षा</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 27%;">वैवाहिक स्थिति</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 14%;">रोजगार</th>
-                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 13%;">वर्तमान पता</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 25%;">वैवाहिक स्थिति</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 13%;">रोजगार</th>
+                <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 16%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody style="text-align: center">
-            <tr><td>1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री अशोक कुमार</td><td>02-10-1963</td><td>12 वीं</td><td>सम्पति देवी</td><td>स्वरोजगार</td><td>बसवा</td></tr>
-            <tr><td>2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री जितेंद्र कुमार</td><td>01-01-1970</td><td>8 वीं</td><td>कंचन देवी</td><td>स्वरोजगार</td><td>बसवा</td></tr>
-            <tr><td>3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री लालचंद</td><td>02-02-1973</td><td>8 वीं</td><td>कुन्ती देवी</td><td>स्वरोजगार</td><td>बसवा</td></tr>
-            <tr><td>4</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री रूपचंद</td><td>01-01-1975</td><td>8 वीं</td><td>निर्मला देवी</td><td>स्वरोजगार</td><td>बसवा</td></tr>
-            <tr><td>5</td><td style="text-align: left; font-weight: bold; color: #b32d56;">विमला देवी</td><td>-</td><td>8 वीं</td><td>श्री मदनलाल बिलोनिया, दूदली (निवासी: बस्सी)</td><td>-</td><td>-</td></tr>
-            <tr><td>6</td><td style="text-align: left; font-weight: bold; color: #b32d56;">कांता देवी</td><td>02-02-1985</td><td>8 वीं</td><td>श्री हनुमान सालोदिया, हसनपुरा, (निवासी: साकून-साली)</td><td>-</td><td>-</td></tr>
+        <tbody class="update-table" style="text-align: center">
+            <tr><td>1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री अशोक कुमार</td><td>02-10-1963</td><td>12वीं</td><td>सम्पति देवी</td><td>स्वरोजगार</td><td>बसवा</td></tr>
+            <tr><td>2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री जितेंद्र कुमार</td><td>01-01-1970</td><td>8वीं</td><td>कंचन देवी</td><td>स्वरोजगार</td><td>बसवा</td></tr>
+            <tr><td>3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री लालचंद</td><td>02-02-1973</td><td>8वीं</td><td>कुन्ती देवी</td><td>स्वरोजगार</td><td>बसवा</td></tr>
+            <tr><td>4</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री रूपचंद</td><td>01-01-1975</td><td>8वीं</td><td>निर्मला देवी</td><td>स्वरोजगार</td><td>बसवा</td></tr>
+            <tr><td>5</td><td style="text-align: left; font-weight: bold; color: #b32d56;">विमला देवी</td><td>01-01-1980</td><td>8वीं</td><td>श्री मदनलाल बिलोनिया, दूदली </td><td>-</td><td>निवासी: बस्सी</td></tr>
+            <tr><td>6</td><td style="text-align: left; font-weight: bold; color: #b32d56;">कांता देवी</td><td>02-02-1985</td><td>8वीं</td><td>श्री हनुमान सालोदिया, हसनपुरा, </td><td>-</td><td>निवासी: साकून-साली</td></tr>
         </tbody>
     </table>
 </div>
@@ -10159,7 +10195,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">अभिषेक (दीपक)</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">बस्सी</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">आशुतोष (संतोष)</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">बस्सी</td></tr>
         </tbody>
@@ -10235,7 +10271,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">निकिता</td><td style="text-align: center;">04-11-2006</td><td style="text-align: center;">11वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">आशुतोष</td><td style="text-align: center;">02-06-2007</td><td style="text-align: center;">12वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -10311,7 +10347,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">गजेंद्र</td><td style="text-align: center;">09-07-1991</td><td style="text-align: center;">BA</td><td style="text-align: center;">विवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">नेहा</td><td style="text-align: center;">06-10-1998</td><td style="text-align: center;">BA</td><td style="text-align: center;">विवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -10387,7 +10423,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">कीर्ति</td><td style="text-align: center;">14-07-2019</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">गर्वित</td><td style="text-align: center;">28-09-2021</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -10462,7 +10498,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">-</td><td style="text-align: left; font-weight: bold; color: #b32d56;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
     </table>
@@ -10538,7 +10574,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">आशा</td><td style="text-align: center;">05-01-2001</td><td style="text-align: center;">BA</td><td style="text-align: center;">विवाहित (11-12-2020)</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">अनुष्का</td><td style="text-align: center;">27-07-2007</td><td style="text-align: center;">8वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">प्रिंसल</td><td style="text-align: center;">08-07-2011</td><td style="text-align: center;">2वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
@@ -10615,7 +10651,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">-</td><td style="text-align: left; font-weight: bold; color: #b32d56;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
     </table>
@@ -10692,7 +10728,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">नरेंद्र</td><td style="text-align: center;">04-01-2000</td><td style="text-align: center;">BA</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">मीनाक्षी</td><td style="text-align: center;">31-07-1995</td><td style="text-align: center;">8वीं</td><td style="text-align: center;">विवाहित (21-06-2014)</td><td style="text-align: center;">-</td><td style="text-align: center;">रामबाग</td></tr>
         </tbody>
@@ -10768,7 +10804,7 @@ body {
                 <th style="border: 1px solid #b32d56; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">मानव</td><td style="text-align: center;">05-03-2015</td><td style="text-align: center;">1वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">परी</td><td style="text-align: center;">06-04-2020</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -10845,7 +10881,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">जया</td><td style="text-align: center;">23-08-1999</td><td style="text-align: center;">2nd Yr</td><td style="text-align: center;">विवाहित (26-02-2020)</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">लक्ष्मी</td><td style="text-align: center;">20-10-2002</td><td style="text-align: center;">11वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">शशि कुमार</td><td style="text-align: center;">03-05-2005</td><td style="text-align: center;">9वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
@@ -10923,7 +10959,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">दिव्यांश</td><td style="text-align: center;">22-09-2021</td><td style="text-align: center;">-</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
         </tbody>
     </table>
@@ -10998,7 +11034,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 16%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody style="text-align: center">
+        <tbody class="update-table" style="text-align: center">
             <tr><td>1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री इंदरराज</td><td>-</td><td>विवाहित</td><td>-</td><td>दौसा</td></tr>
             <tr><td>2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री हेमंत कुमार</td><td>-</td><td>विवाहित</td><td>-</td><td>दौसा</td></tr>
             <tr><td>3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">श्री कमल कुमार</td><td>-</td><td>विवाहित</td><td>-</td><td>दौसा</td></tr>
@@ -11079,7 +11115,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">भारत</td><td style="text-align: center;">28-05-2002</td><td style="text-align: center;">12वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">कुमारी डिम्पल</td><td style="text-align: center;">03-12-2008</td><td style="text-align: center;">7वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -11155,7 +11191,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">कु. भूमिका</td><td style="text-align: center;">-</td><td style="text-align: center;">11वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">रोहित</td><td style="text-align: center;">-</td><td style="text-align: center;">10वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">ओजस्विनी</td><td style="text-align: center;">-</td><td style="text-align: center;">4वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
@@ -11232,7 +11268,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">भावेश</td><td style="text-align: center;">-</td><td style="text-align: center;">8वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">पुरवेश</td><td style="text-align: center;">-</td><td style="text-align: center;">5वीं</td><td style="text-align: center;">अविवाहित</td><td style="text-align: center;">अध्ययनरत</td><td style="text-align: center;">-</td></tr>
         </tbody>
@@ -11308,7 +11344,7 @@ body {
                 <th style="border: 1px solid #d4af37; padding: 4px 3px; text-align: center; width: 17%;">वर्तमान पता</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="update-table">
             <tr><td style="text-align: center;">1</td><td style="text-align: left; font-weight: bold; color: #b32d56;">प्रीति कुमारी</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">2</td><td style="text-align: left; font-weight: bold; color: #b32d56;">महेंद्र</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
             <tr><td style="text-align: center;">3</td><td style="text-align: left; font-weight: bold; color: #b32d56;">राहुल</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td></tr>
